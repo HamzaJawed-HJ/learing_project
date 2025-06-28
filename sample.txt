@@ -1,0 +1,54 @@
+ LIFE CYCLE METHODS IN REACT NATIVE FUNCTIONAL COMPONENETS: 
+ In React Native functional components, lifecycle events are handled using React 
+Hooks (mainly `useEffect`). 
+ Mounting: `useEffect(() => { ... }, [])` runs once when the component mounts (like 
+`componentDidMount`). 
+ Updating: `useEffect(() => { ... }, [dependency])` runs when the specified 
+dependency changes (like `componentDidUpdate`). 
+ Unmounting: `useEffect(() => { return () => { ... }; }, [])` cleanup function runs 
+when the component unmounts (like `componentWillUnmount`). 
+ Hooks provide a way to perform side effects, fetch data, set up subscriptions, and 
+clean up resources in functional components. 
+Q2) Stratgies used to optimize performance of React Native App: 
+ Use FlatList or SectionList for rendering large lists efficiently instead of ScrollView. 
+ Minimize unnecessary re-renders by using React.memo, useCallback, and 
+useMemo. 
+ Optimize images by resizing and compressing them before use. 
+ Use lazy loading and code splitting to load components only when needed. 
+ Avoid inline functions and object/array literals in render methods. 
+ Reduce the number of components mounted at once. 
+ Use native modules and libraries for heavy computations or animations. 
+ Remove unused dependencies and assets to reduce app size. 
+ Enable Hermes engine for better JavaScript performance on Android. 
+ Profile and monitor performance using tools like Flipper and React DevTools. 
+Q3) Differnces between  navigations: 
+Stack Navigation 
+ Organizes screens in a stack (like a deck of cards). 
+ Allows users to push and pop screens (navigate forward and back). 
+ Common for workflows where users move deeper into content (e.g., details 
+pages). 
+ Back button returns to the previous screen. 
+Tab Navigation 
+ Displays tabs (usually at the bottom or top) for switching between main sections. 
+ Each tab has its own navigation stack. 
+ Good for apps with a few top-level screens (e.g., Home, Search, Profile). 
+ Users can quickly switch between sections. 
+Drawer Navigation 
+ Provides a side menu (drawer) that slides in from the left or right. 
+ Menu contains links to different screens or sections. 
+ Useful for apps with many sections or settings. 
+ Frees up screen space compared to tabs.
+
+
+
+
+command
+
+
+npm install @react-navigation/native @react-navigation/native-stack
+
+# AsyncStorage
+npm install @react-native-async-storage/async-storage
+
+# Required by Navigation
+npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
