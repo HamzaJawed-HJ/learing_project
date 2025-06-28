@@ -1,0 +1,47 @@
+Sure, Hamza! Here's the **short and bullet-point format** for theory written answers:
+
+---
+
+### **1. Strategies to Optimize Performance of a React Native App**
+
+* Use `FlatList` for rendering large lists.
+* Avoid unnecessary re-renders with `React.memo`, `useCallback`, `useMemo`.
+* Optimize image size and use `react-native-fast-image`.
+* Minimize state in parent components.
+* Enable Hermes for better Android performance.
+* Use lazy loading (`React.lazy`).
+* Avoid inline functions and styles in render.
+* Use native modules like `react-native-reanimated` for animations.
+
+---
+
+### **2. Lifecycle Methods in React Native Functional Components**
+
+* Functional components use **Hooks** instead of lifecycle methods.
+* `componentDidMount` → `useEffect(() => {}, [])`
+* `componentDidUpdate` → `useEffect(() => {}, [dependency])`
+* `componentWillUnmount` → `useEffect(() => { return () => {} }, [])`
+
+---
+
+### **3. Difference Between Stack, Tab, and Drawer Navigator**
+
+| Navigator  | Use Case                           | UI Style                 |
+| ---------- | ---------------------------------- | ------------------------ |
+| **Stack**  | For navigation like Login → Home   | Screens stack like pages |
+| **Tab**    | For switching between main screens | Bottom/Top tabs layout   |
+| **Drawer** | For side menus (Profile, Settings) | Side drawer (slide-in)   |
+
+---
+
+### **4. Identify Issues in Code (Common)**
+
+* Missing `keyExtractor` in `FlatList` → causes warning/performance issues.
+* Inline functions in `render` → cause unnecessary re-renders.
+* Directly mutating state → leads to bugs.
+* No `await` with `AsyncStorage` → async issues.
+* Not handling empty/null values from storage → app crashes or undefined behavior.
+
+---
+
+Let me know if you want this exported to a file for submission or printed notes.
